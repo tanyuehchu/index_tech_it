@@ -2,7 +2,6 @@
 .container_90{
     width: 90%;
     margin: 0 auto;
-    min-height: 100vh;
 }
 /* 
 標題層級：
@@ -39,7 +38,7 @@
     font-family: 'Fira Sans', sans-serif;
 }
 .display_title_2{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
 }
@@ -82,20 +81,10 @@ section{
     left:0;
     object-fit: cover;
     z-index: -2;
-    opacity: .5;
-}
-
-.blur{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    /* backdrop-filter: blur(10px); */
 }
 
 .section_1 .index{
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .section_1 .textwrap{
@@ -122,20 +111,22 @@ section{
 
 .left.textwrap::after{
     background: radial-gradient(circle, rgba(224, 132, 89, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    /* box-shadow:
-    inset 60px 0 120px #a37159; */
+    box-shadow:
+    inset 60px 0 120px #ecc9b7;
     background-size: 300%;
-    bottom: -10%;
+    bottom: -20%;
     right: -80%;
+    backdrop-filter: blur(10px);
     
 }
 .right.textwrap::after{
     background: radial-gradient(circle, rgba(141, 141, 184, 1) 0%, rgba(255,255,255,0) 100%);
-    /* box-shadow:
-    inset 60px 0 120px #787892; */
+    box-shadow:
+    inset 60px 0 120px #9090b3;
     background-size: 200%;
-    bottom:  -10%;
+    bottom:  -20%;
     right: -60%;
+    backdrop-filter: blur(10px);
 }
 
 .down_wrap{
@@ -144,7 +135,7 @@ section{
     left: 45%;
 }
 .explore{
-    color: #533E38;
+    color: #ffffff;
 }
 
 .down_wrap .circle{
@@ -154,6 +145,12 @@ section{
     background-color: #58352F;
     border-radius: 999em;
     opacity: .7;
+}
+
+.circle.down{
+    background: #000;
+    transition: .5s;
+    transform: translate(0, 20px);
 }
 
 /* -----------------------rwd------------------------ */
@@ -231,6 +228,14 @@ section{
     position: absolute;
     top: 40%;
     left: 88%;
+    transition: .2s;
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+#phone.phone_show{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .section_2 .dialog_wrap>li{
@@ -388,7 +393,7 @@ section{
 .card{
     width: 90%;
     background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     border-radius: 60px 60px 0 0;
     overflow: hidden;
     transition: all 100ms ease-in-out;
@@ -736,6 +741,8 @@ section{
     min-height: 700px;
 }
 
+/* 選選看1 */
+
 .choose1{
     position: absolute;
     top: -11%;
@@ -754,7 +761,6 @@ section{
 .section_4 .choose2 .choose_card{
     width: 100%;
 }
-
 
 .choose_card .textwrap h5{
     line-height: 2rem;
@@ -783,8 +789,16 @@ section{
     margin: 1.5rem auto;
 }
 
+.choose_card.choosed,.choose_btn.choosed{
+    background-color: #9090b3;
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 20px 20px 60px #797979d1, -20px -20px 60px #ffffff;
+}
 
+/* 推薦商品 */
 /* 舒涵的卡片樣式 */
+
 
 .section_4 .item_wrap{
     width: 22%;
@@ -793,12 +807,12 @@ section{
 
 .item_card{
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 20px;
 }
 
 .item_card>img{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -991,7 +1005,7 @@ section{
     }
 
     .choose1{
-        top: 2%;
+        top: 0%;
     }
 
     .section_4 .choose_card .card-title{

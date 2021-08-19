@@ -428,7 +428,7 @@
                 </nav>
             </header>
 
-            <video autoplay muted loop src="video/production ID_4109310.mp4"></video>
+            <video autoplay muted loop src="./video/production ID_4109338.mp4"></video>
 
             <div class="index d-flex flex-column flex-md-row justify-content-md-center">
                 <div class="left textwrap text-center">
@@ -441,7 +441,7 @@
                         <li class="display_3"><a href="">掃地機器人</a></li>
                     </ul>
                     <a href="">
-                        <p class="display_2 color_brown">前往商場 >></p>
+                        <p class="display_2">前往商場 >></p>
                     </a>
                 </div>
                 <div class="right mt-5 mt-md-0 textwrap text-center">
@@ -455,7 +455,7 @@
                         <li class="display_3"><a href="">智能周邊</a></li>
                     </ul>
                     <a href="">
-                        <p class="display_2 color_dark_purple">前往商場 >></p>
+                        <p class="display_2 ">前往商場 >></p>
                     </a>
                 </div>
             </div>
@@ -799,13 +799,23 @@
                                         沒力氣再爬起來關燈
                                     </h5>
                                 </div>
+                                <img src="./index_img/choose-1.png" class="card-img" alt="...">
+                            </div>
+                            <div class="choose_card">
+                                <div class="text_wrap mt-1 mt-md-5">
+                                    <h5 class="card-title text-center display_title_2  my-3 my-md-5 ">
+                                        平日忙到不行
+                                        <br>
+                                        閒的時候根本不想打掃
+                                    </h5>
+                                </div>
                                 <img src="./index_img/choose-2.png" class="card-img" alt="...">
                             </div>
                             <div class="choose_card">
                                 <div class="text_wrap mt-1 mt-md-5">
                                     <h5 class="card-title text-center display_title_2  my-3 my-md-5 ">
-                                        已經躺平在床上的我<br>
-                                        沒力氣再爬起來關燈
+                                        早出晚歸<br>
+                                        難道只能吃外食？
                                     </h5>
                                 </div>
                                 <img src="./index_img/choose-3.png" class="card-img" alt="...">
@@ -813,35 +823,26 @@
                             <div class="choose_card">
                                 <div class="text_wrap mt-1 mt-md-5">
                                     <h5 class="card-title text-center display_title_2  my-3 my-md-5 ">
-                                        已經躺平在床上的我<br>
-                                        沒力氣再爬起來關燈
+                                        懶的極致只做重要的事<br>
+                                        剩下的雜事交給管家就好
                                     </h5>
                                 </div>
                                 <img src="./index_img/choose-4.png" class="card-img" alt="...">
-                            </div>
-                            <div class="choose_card">
-                                <div class="text_wrap mt-1 mt-md-5">
-                                    <h5 class="card-title text-center display_title_2  my-3 my-md-5 ">
-                                        已經躺平在床上的我<br>
-                                        沒力氣再爬起來關燈
-                                    </h5>
-                                </div>
-                                <img src="./index_img/choose-1.png" class="card-img" alt="...">
                             </div>
                         </div>
                         <h5 class="display_title_2 text-center text-md-left">選選看-選擇一種情境</h5>
                         <div class="btn_wrap">
                             <div class="choose_btn">
-                                <h3 class="display_title">追求CP值</h3>
+                                <h3 class="display_title">又俗又大碗</h3>
                             </div>
                             <div class="choose_btn">
                                 <h3 class="display_title">追求CP值</h3>
                             </div>
                             <div class="choose_btn">
-                                <h3 class="display_title">追求CP值</h3>
+                                <h3 class="display_title">我要黑科技</h3>
                             </div>
                             <div class="choose_btn">
-                                <h3 class="display_title">追求CP值</h3>
+                                <h3 class="display_title">質感の選品</h3>
                             </div>
                         </div>
                     </div>
@@ -1346,6 +1347,10 @@
                     // console.log($(item));
                     $(item).addClass('fadeIN');
                 })
+            };
+            if ($('.section_3').hasClass('active')) {
+                console.log('hi section3');
+                $('.section_3 .card').addClass('card_show')
             }
         }
         var element = document.querySelector('body');
@@ -1416,10 +1421,28 @@
             }
         })
 
-        $('.choose2 .re_choose').click(function () {
+        $('.re_choose').click(function () {
             console.log('click');
             $('.choose2').hide();
             $('.choose1').css('opacity', '1');
+        })
+    </script>
+
+    <!-- mouseenter -->
+    <script>
+        $('.left').mouseenter(function () {
+            console.log('enter');
+            $(this).addClass('scale');
+        });
+        $('.left').mouseleave(function () {
+            $(this).removeClass('scale');
+        })
+        $('.right').mouseenter(function () {
+            console.log('enter');
+            $(this).addClass('scale');
+        });
+        $('.right').mouseleave(function () {
+            $(this).removeClass('scale');
         })
     </script>
 

@@ -231,11 +231,17 @@ section{
     transition: .2s;
     transform: translateY(200px);
     opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
 #phone.phone_show{
     transform: translateY(0px);
     opacity: 1;
+}
+
+.section_2 .dialog_wrap{
+    width: 100%;
+    margin: 0%;
 }
 
 .section_2 .dialog_wrap>li{
@@ -246,6 +252,31 @@ section{
     padding: 1%;
     width: 17%;
     height: 130px; 
+    box-shadow:  10px 10px 20px #cccccc,
+             -10px -10px 20px #dbdbdb;
+}
+
+.dialog_wrap > li.fadeIN{
+    animation: fadeInFromNone 1s cubic-bezier(.83,.27,.55,.94);
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .section_2 .img_wrap ul>li:nth-child(1){
@@ -280,6 +311,17 @@ section{
     right: 13%;
 }
 
+.section_2 .btn{
+    background-color: #5D5D71;
+    padding: 0.6rem;
+    color: white;
+    border-radius: 999em;
+    margin: 0rem auto;
+    position: absolute;
+    bottom: 25px;
+    left: 60%;
+}
+
 /* rwd */
 
 @media screen and (max-width: 575.98px) {
@@ -298,7 +340,7 @@ section{
         margin-top: 4rem;
     }
     #phone{
-        width: 30%;
+        width: 40%;
         top: 96%;
         left: 58%;
     }
@@ -372,7 +414,8 @@ section{
         padding: 0.6rem;
         color: white;
         border-radius: 999em;
-        margin: 2rem auto 0
+        margin: 2rem auto 0;
+        position: static;
     }
  }
 
@@ -541,10 +584,13 @@ section{
     /* white-space: nowrap; */
     text-overflow: ellipsis;
     overflow: hidden;
+    box-shadow: inset 10px -10px 10px #bebebe, inset -10px 10px 10px #ffffff;
 }
 
 .card_right .item h5{
+    font-size: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* pet */
@@ -580,33 +626,33 @@ section{
 }
 
 /* baby */
-.card_right .baby .item:nth-child(1){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-1.jpeg);
+.baby:nth-child(1) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-1.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .baby .item:nth-child(2){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-2.jpeg);
+.baby:nth-child(2) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-2.png);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .baby .item:nth-child(3){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.baby:nth-child(3) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-3.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .baby .item:nth-child(4){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.baby:nth-child(4) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-4.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .baby .item:nth-child(5){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.baby:nth-child(5) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-5.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .baby .item:nth-child(6){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.baby:nth-child(6) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/baby-6.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
@@ -651,7 +697,7 @@ section{
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
     color: white;
     background-color: #FA8873; 
-}
+    box-shadow:  10px 10px 30px #bebebe, -10px -10px 30px #ffffff;}
 
 
 

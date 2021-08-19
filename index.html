@@ -525,8 +525,12 @@
                             <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
                         </li>
                         <li class="dt dt_hide">
-                            <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
+                            <h5>智慧音箱</h5>
+                            <p>只要<span class="display_title_2">出一張嘴</span>電燈、冷氣、家電…就通通都可輕鬆控制</p>
+                        </li>
+                        <li class="dt dt_hide">
+                            <h5>智慧窗簾</h5>
+                            <p>平日早上8點一到，就打開智慧窗簾讓<span class="display_title_2">陽光照進</span>臥室</p>
                         </li>
                         <li class="dt dt_hide">
                             <h5>智能冰箱</h5>
@@ -534,23 +538,15 @@
                         </li>
                         <li class="dt dt_hide">
                             <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
+                            <p>智能冰箱輕鬆具備人工智慧(AI)食材辨識能力，還可以<span class="display_title_2">提供食譜</span>與購物清單建議。</p>
                         </li>
                         <li class="dt dt_hide">
-                            <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
+                            <h5>智慧電子鍋</h5>
+                            <p>用手機控制電子鍋煮飯時間，下班回家<span class="display_title_2">準時開飯</span></p>
                         </li>
                         <li class="dt dt_hide">
-                            <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
-                        </li>
-                        <li class="dt dt_hide">
-                            <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
-                        </li>
-                        <li class="dt dt_hide">
-                            <h5>智能冰箱</h5>
-                            <p>當手機GPS 定位快回到家了，就把客廳冷氣<span class="display_title_2">預先打開</span></p>
+                            <h5>智能感測器</h5>
+                            <p>當移動感測器偵測到<span class="display_title_2">有人經過</span>，就觸發房間電燈打開</p>
                         </li>
                     </ul>
                 </div>
@@ -1369,6 +1365,35 @@
 
         })
 
+    </script>
+
+    <!-- text change -->
+    <script>
+        //changePage
+        $('.dia_text_wrap li').eq(0).show();
+        $('.dia_text_wrap li').eq(0).siblings().hide();
+
+        $('.circle_wrap li').click(function () {
+
+            // console.log('li index : ', $(this).index());
+            const circleIndex = $(this).index();
+
+            $('.dia_text_wrap li').each(function (index, item) {
+
+                // console.log('.dia_text_wrap li this index :', $(this).index());
+
+                if (circleIndex == index) {
+                    $(item).show()
+                    $(item).siblings().hide()
+                    $(item).addClass('dia_move');
+                }
+                else {
+                    $(item).hide();
+
+                }
+            })
+
+        })
     </script>
 
     <!-- choose card -->

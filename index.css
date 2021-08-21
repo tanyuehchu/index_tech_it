@@ -90,6 +90,7 @@ section{
 
 .section_1 .textwrap{
     position: relative;
+    transition: .5s;
 }
 
 .textwrap::after{
@@ -101,7 +102,6 @@ section{
     z-index: -1;
     backdrop-filter: blur(10px);
     mix-blend-mode: screen;
-
 }
 
 .left{
@@ -117,10 +117,9 @@ section{
     20px 20px 60px #927a5b;
     background-size: 300%;
     bottom: -20%;
-    right: -80%;
-    /* backdrop-filter: blur(5px); */
-    
+    right: -80%;    
 }
+
 .right.textwrap::after{
     background: radial-gradient(circle, rgba(146, 118, 224, 0.5) 0%, rgba(255,255,255,0) 100%);
     box-shadow:
@@ -130,6 +129,7 @@ section{
     right: -80%;
     backdrop-filter: blur(5px);
 }
+
 .left.textwrap.scale::after,.right.textwrap.scale::after{
     animation: scale 1s cubic-bezier(.83,.27,.55,.94);
     animation-fill-mode: forwards;
@@ -573,17 +573,23 @@ section{
     position: relative;
 }
 
-.card_left .img_wrap img:nth-child(2){
+.card_left .img_wrap .img_before{
     object-fit: cover;
+    transition: .8s;
 }
 
-.card_left .img_wrap img:nth-child(3){
+
+.card_left .img_wrap .img_after{
+    transition: .8s;
     object-fit: cover;
     position: absolute;
     top: 0;
     right: 0px;
     opacity: 0;
 }
+
+
+
 
 .card_show{
     opacity: 1;
@@ -643,33 +649,33 @@ section{
 }
 
 /* pet */
-.card_right .pet .item:nth-child(1){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-1.jpeg);
+.pet:nth-child(1) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-1.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .pet .item:nth-child(2){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-2.jpeg);
+.pet:nth-child(2) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-2.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .pet .item:nth-child(3){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.pet:nth-child(3) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-3.png);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .pet .item:nth-child(4){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.pet:nth-child(4) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-4.png);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .pet .item:nth-child(5){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.pet:nth-child(5) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-5.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .pet .item:nth-child(6){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.pet:nth-child(6) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/pet-6.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
@@ -707,36 +713,37 @@ section{
 }
 
 /* night */
-.card_right .night .item:nth-child(1){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-1.jpeg);
+.night:nth-child(1) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-1.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .night .item:nth-child(2){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/dog-2.jpeg);
+.night:nth-child(2) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-2.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .night .item:nth-child(3){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.night:nth-child(3) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-3.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .night .item:nth-child(4){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.night:nth-child(4) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-4.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .night .item:nth-child(5){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.night:nth-child(5) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-5.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
-.card_right .night .item:nth-child(6){
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(./index_img/jpg/dog-2.jpeg);
+.night:nth-child(6) .item{
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(index_img/jpg/night-6.jpeg);
     background-size: cover;
     background-position: 80% 0%;
 }
+
 
 
 .card_right .btn{
@@ -966,19 +973,33 @@ section{
 .section_4 .item_wrap{
     width: 22%;
     margin: 0.5rem;
+    background: rgba(255, 255, 255, .5);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(5px);
+    border-radius: 15px;
+    border:1px solid white;
 }
 
 .item_card{
-    background-color: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.8); */
     padding: 1rem;
     border-radius: 15px;
 }
 
-.item_card>img{
+.item_card .img_wrap{
     width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.item_card .img_wrap>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin: 0 auto;
     display: block;
-    border-radius: 15px;
 }
 
 .firstline {
@@ -1188,6 +1209,13 @@ section{
         width: 49%;
         overflow: hidden;
         margin-top: 1%;
+    }
+
+    .item_card .img_wrap{
+        width: 100%;
+        height: 100px;
+        border-radius: 15px;
+        overflow: hidden;
     }
 
     .card-img{

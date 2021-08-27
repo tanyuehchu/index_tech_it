@@ -2,6 +2,7 @@
 .container_90{
     width: 90%;
     margin: 0 auto;
+    min-height: 85vh;
 }
 /* 
 標題層級：
@@ -515,7 +516,7 @@ section{
 }
 
 .card .card_wrap{
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
 }
 
 .section_3 .card-stack .ori_card_1{
@@ -554,7 +555,7 @@ section{
     position: absolute;
     opacity: 0.5;
     display: inline;
-    width:45%;
+    width:35%;
     height:30%;
     background-color:#fff1a1;
     z-index: -1;
@@ -640,10 +641,11 @@ section{
     text-overflow: ellipsis;
     overflow: hidden;
     box-shadow: inset 10px -10px 10px #bebebe, inset -10px 10px 10px #ffffff;
+    min-height: 170px;
 }
 
 .card_right .item h5{
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -985,6 +987,7 @@ section{
     /* background-color: rgba(255, 255, 255, 0.8); */
     padding: 1rem;
     border-radius: 15px;
+    min-height: 380px;
 }
 
 .item_card .img_wrap{
@@ -992,6 +995,7 @@ section{
     height: 200px;
     border-radius: 15px;
     overflow: hidden;
+    min-height: 320px;
 }
 
 .item_card .img_wrap>img{
@@ -1216,6 +1220,7 @@ section{
         height: 100px;
         border-radius: 15px;
         overflow: hidden;
+        min-height: auto;
     }
 
     .card-img{
@@ -1267,6 +1272,7 @@ section{
         position: relative;
         overflow: hidden;
         padding: .7rem;
+        min-height: 0;
     }
 
     .item_card>img {
